@@ -33,7 +33,7 @@ $ng-select-value-font-size: $vf-font-size-6 !default;
                 box-shadow: none;
             }
             .ng-arrow {
-                top: -2px;
+                top: -.1rem;
                 border-color: transparent transparent darken($ng-select-border, 20);
                 border-width: 0 5px 5px;
                 &:hover {
@@ -191,8 +191,14 @@ $ng-select-value-font-size: $vf-font-size-6 !default;
     }
     .ng-clear-wrapper {
         color: darken($ng-select-border, 20);
+        .ng-clear {
+
+            margin-top: -0.2em;
+            margin-right: $vf-spacing-6;
+            font-size: $vf-font-size-2 !important;
+        }
         &:hover .ng-clear {
-            color: #D0021B;
+            color: $vf-danger-100;
         }
     }
     .ng-spinner-zone {
@@ -331,16 +337,17 @@ ng-select.ng-select {
     &.ng-invalid.ng-touched {
       .ng-select-container {
         border: 1px solid $vf-danger-100;
-        border-radius: $vf-radius
       }
     }
   
     &.ng-select-opened > .ng-select-container {
       z-index: inherit;
       .ng-arrow {
-        top: 50%;
+        margin-top: -.15rem;
         border-color: $vf-black-100;
         border-width: 3px;
+        transform: rotate(135deg);
+        transform-origin: center;
       }
     }
   
@@ -361,17 +368,16 @@ ng-select.ng-select {
   
     &.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
       border: 1px solid $vf-primary-100;
-      box-shadow: 0 0 0 0.125em rgba(10, 105, 199, 0.25);
     }
   
     .ng-select-container {
       min-height: 40px;
       border-color: $vf-black-20;
-      position: static;
   
       .ng-clear-wrapper {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        width:32px
       }
     }
   
@@ -381,89 +387,17 @@ ng-select.ng-select {
       border-right: 0;
       border-top: 0;
       position: absolute;
-      top: 50%;
+      top: -.15rem;
       transform: rotate(-45deg);
       transform-origin: center;
       right: 1em;
       z-index: 4;
-      height: 0.5em;
-      width: 0.5em;
-      margin-top: -0.3em;
+      height: 0.75em;
+      width: 0.75em;
+      margin-top: -0.45em;
     }
   
     label.checkbox {
       pointer-events: none;
     }
-  }
-  
-
-// ng-select package ui overwritten
-ng-select.ng-select {
-    &.ng-invalid.ng-touched {
-      .ng-select-container {
-        border: 1px solid $vf-warning-100;
-        border-radius: $vf-radius
-      }
-    }
-  
-    &.ng-select-opened > .ng-select-container {
-      z-index: inherit;
-      .ng-arrow {
-        top: 50%;
-        border-color: $vf-black-100;
-        border-width: 3px;
-      }
-    }
-  
-    &.ng-select-disabled {
-      .ng-select-container {
-        background-color: $vf-black-5;
-        border-color: $vf-black-20;
-        color: $vf-black-60;
-        cursor: not-allowed;
-        .ng-value-container .ng-input > input {
-          cursor: not-allowed;
-        }
-      }
-      .ng-arrow-wrapper .ng-arrow {
-        pointer-events: none;
-      }
-    }
-  
-    &.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
-      border: 1px solid $vf-primary-100;
-      box-shadow: 0 0 0 0.125em rgba(10, 105, 199, 0.25);
-    }
-  
-    .ng-select-container {
-      min-height: 40px;
-      border-color: $vf-black-20;
-      position: static;
-  
-      .ng-clear-wrapper {
-        display: flex;
-        justify-content: center;
-      }
-    }
-  
-    .ng-arrow-wrapper .ng-arrow {
-      border: 3px solid $vf-black-100;
-      border-radius: 2px;
-      border-right: 0;
-      border-top: 0;
-      position: absolute;
-      top: 50%;
-      transform: rotate(-45deg);
-      transform-origin: center;
-      right: 1em;
-      z-index: 4;
-      height: 0.5em;
-      width: 0.5em;
-      margin-top: -0.3em;
-    }
-  
-    label.checkbox {
-      pointer-events: none;
-    }
-
-  }
+}
