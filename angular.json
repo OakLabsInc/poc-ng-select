@@ -99,6 +99,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bulma/css/bulma.min.css",
+              "./node_modules/@verifone/ui-design-system/docs/css/custom-bulma.min.css",
               "src/styles.scss"
             ],
             "scripts": []
