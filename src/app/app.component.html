@@ -19,11 +19,15 @@
   </div>
 </section>
 <div class="container">
-  <div class="box is-flex-direction-row is-justify-content-center">
+  <div class="box is-flex ">
       <!--Using ng-option and for loop-->
-      <ng-select [(ngModel)]="selectedCar">
+      <ng-select [(ngModel)]="selectedCar" [multiple]="true" class="is-flex-grow-1">
         <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
       </ng-select>
+      <ng-select [(ngModel)]="selectedCar2" class="is-flex-grow-1">
+        <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+      </ng-select>
+
   </div>
 </div>
 

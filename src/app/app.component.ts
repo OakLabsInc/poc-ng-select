@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'test';
   selectedCar: any;
+  selectedCar2: any;
 
     cars = [
         { id: 1, name: 'Volvo' },
