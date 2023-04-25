@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'test';
   selectedCar: any;
   selectedCar2: any;
+  selectedCar3: any;
 
     cars = [
         { id: 1, name: 'Volvo' },

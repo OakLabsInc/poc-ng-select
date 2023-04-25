@@ -1,13 +1,10 @@
-
-
-
 <div class="container">
-  
+
 </div>
 <section class="hero">
   <div class="hero-body ">
     <p class="title has-text-centered">
-     Bulma / ng-select 
+      Bulma / ng-select
     </p>
     <div class="subtitle has-text-centered">
       <ul>
@@ -20,14 +17,78 @@
 </section>
 <div class="container">
   <div class="box is-flex ">
-      <!--Using ng-option and for loop-->
-      <ng-select [(ngModel)]="selectedCar" [multiple]="true" class="is-flex-grow-1">
-        <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
-      </ng-select>
-      <ng-select [(ngModel)]="selectedCar2" class="is-flex-grow-1">
-        <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
-      </ng-select>
+    <!--Using ng-option and for loop-->
+    <ng-select [(ngModel)]="selectedCar" [multiple]="true" class="is-flex-grow-1">
+      <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+    </ng-select>
+    <ng-select [(ngModel)]="selectedCar2" class="is-flex-grow-1">
+      <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+    </ng-select>
+  </div>
+  <div class="box has-overlay">
+    <div class="overlay-content p-5">
+      <table class="table is-hoverable is-focusable is-fullwidth">
+        <thead>
+          <tr>
+            <th>Created</th>
+            <th>Reference</th>
+            <th>Organisation</th>
+            <th>Product</th>
+            <th class="has-text-right">Amount</th>
+            <th>State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>17/06/2020, 10:16:23</td>
+            <td>
+              <a class="has-text-truncate">order4325 LKJSAJD </a>
+            </td>
+            <td>
+              <div class="is-flex">
+                <span class="has-text-truncate"> Mango </span>
+              </div>
+            </td>
+            <td>Visa</td>
+            <td class="has-text-right">12.34 EUR</td>
+            <td>Failed</td>
+          </tr>
+          <tr>
+            <td>17/06/2020, 10:16:23</td>
+            <td>
+              <a class="has-text-truncate">order4325 LKJSAJD </a>
+            </td>
+            <td>
+              <div class="is-flex">
+                <span class="has-text-truncate"> Mango </span>
+              </div>
+            </td>
+            <td>Visa</td>
+            <td class="has-text-right">12.34 EUR</td>
+            <td>Failed</td>
+          </tr>
+          <tr>
+            <td>17/06/2020, 10:16:23</td>
+            <td>
+              <a class="has-text-truncate">order4325 LKJSAJD </a>
+            </td>
+            <td>
+              <div class="is-flex">
+                <span class="has-text-truncate"> Mango </span>
+              </div>
+            </td>
+            <td>Visa</td>
+            <td class="has-text-right">12.34 EUR</td>
+            <td>Failed</td>
+          </tr>
+        </tbody>
+      </table>
 
+    </div>
+    <div class="is-overlay  p-5">
+      <ng-select [(ngModel)]="selectedCar2" [multiple]="true" class="is-flex-grow-1">
+        <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
+      </ng-select>
+    </div>
   </div>
 </div>
-
