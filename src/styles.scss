@@ -439,7 +439,6 @@ ng-select.ng-select {
       background-color: transparent;
       color: $vf-white-100;
       margin-right: 5px;
-      padding: 4px;
       @include rtl {
         margin-right: 0;
         margin-left: 5px;
@@ -531,9 +530,6 @@ ng-select.ng-select {
         color: $vf-white-60;
         cursor: not-allowed;
 
-        .ng-value-container .ng-value {
-          // background-color: $vf-accent-100 !important;
-        }
         &.ng-input > input {
           cursor: not-allowed;
         }
@@ -600,7 +596,7 @@ ng-select.ng-select {
       background-color: $ng-select-selected-dark;
 
       margin-right: 5px;
-      padding: 4px;
+
       @include rtl {
         margin-right: 0;
         margin-left: 5px;
@@ -712,6 +708,9 @@ ng-select.ng-select {
       min-height: 40px;
       border-color: $vf-white-80;
       background: transparent;
+      &.ng-has-value {
+        padding: 0;
+      }
       .ng-clear-wrapper {
         display: flex;
         justify-content: flex-start;
