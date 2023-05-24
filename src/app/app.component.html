@@ -16,11 +16,13 @@
   </div>
 </section>
 <div class="container">
-  <div class="box is-flex ">
+  <div class="box">
     <!--Using ng-option and for loop-->
-    <ng-select [(ngModel)]="selectedCar" [multiple]="true" class="is-flex-grow-1">
+    <h3 class="title is-3">Multiple</h3>
+    <ng-select [(ngModel)]="selectedCar" [multiple]="true" class="is-flex-grow-1 mb-2">
       <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
     </ng-select>
+    <h3 class="title is-3">Single</h3>
     <ng-select [(ngModel)]="selectedCar2" class="is-flex-grow-1">
       <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
     </ng-select>
@@ -85,11 +87,13 @@
       </table>
 
     </div>
-    <div class="is-overlay  p-5">
-      <ng-select [(ngModel)]="selectedCar" [multiple]="true" class="is-flex-grow-1">
+    <div class="is-overlay  p-5 ">
+      <h3 class="title is-3">Multiple</h3>
+      <ng-select [(ngModel)]="selectedCar3" [multiple]="true" class="is-flex-grow-1 mb-2">
         <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
       </ng-select>
-      <ng-select [(ngModel)]="selectedCar2" class="is-flex-grow-1">
+      <h3 class="title is-3">Single</h3>
+      <ng-select [(ngModel)]="selectedCar4" class="is-flex-grow-1">
         <ng-option *ngFor="let car of cars" [value]="car.id">{{car.name}}</ng-option>
       </ng-select>
     </div>

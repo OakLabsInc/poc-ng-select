@@ -10,6 +10,7 @@ export class AppComponent {
   selectedCar: any;
   selectedCar2: any;
   selectedCar3: any;
+  selectedCar4: any;
 
     cars = [
         { id: 1, name: 'Volvo' },
