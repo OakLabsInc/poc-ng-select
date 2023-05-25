@@ -149,10 +149,7 @@ $ng-select-value-font-size-dark: $vf-font-size-6 !default;
           border-radius: $ng-select-border-radius;
           margin-right: 5px;
           padding: 1px;
-          @include rtl {
-            margin-right: 0;
-            margin-left: 5px;
-          }
+
           &.ng-value-disabled {
             background-color: $ng-select-disabled-text;
             .ng-value-label {
@@ -423,7 +420,15 @@ ng-select.ng-select {
   }
 }
 
-.is-overlay {
+.is-overlay, .is-dark {
+  .ng-select {
+    &.ng-dirty .ng-select-container {
+      border: 1px solid $vf-warning-100 !important;
+    }
+    .ng-select-container {
+      background: $vf-black-100 !important;
+    }
+  }
   .ng-select.ng-select-single {
     input {
       color: $vf-white-100;
@@ -439,10 +444,7 @@ ng-select.ng-select {
       background-color: transparent;
       color: $vf-white-100;
       margin-right: 5px;
-      @include rtl {
-        margin-right: 0;
-        margin-left: 5px;
-      }
+      
       &.ng-value-disabled {
         background-color: $ng-select-disabled-text-dark;
         .ng-value-label {
@@ -597,10 +599,6 @@ ng-select.ng-select {
 
       margin-right: 5px;
 
-      @include rtl {
-        margin-right: 0;
-        margin-left: 5px;
-      }
       &.ng-value-disabled {
         background-color: $ng-select-disabled-text-dark;
         .ng-value-label {
